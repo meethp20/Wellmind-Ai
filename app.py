@@ -23,7 +23,7 @@ st.set_page_config(
 @st.cache_data
 def preprocess_data():
     # Load the dataset
-    df = pd.read_csv('dataset.csv')
+    df = pd.read_csv('dataset.csv', sep='	')
     
     # Remove the patient number column
     df = df.drop('Patient Number', axis=1)
